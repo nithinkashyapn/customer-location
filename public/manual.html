@@ -3,22 +3,24 @@
   <head>
     <title>Customer location</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/style.css">        
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/manual.css">        
   </head>
-  <body>
+  <body>  
     <div id="inputinfo">
         <div class="card-body">
             <button type="button" class="btn btn-warning btn-lg btn-block" onclick="submitLoc()">Submit location</button><br/>  
-            <p class="card-text">Not this location? <a href="/manual">Submit manually.</a></p>    
         </div>
-    </div>      
-    <div id="map_canvas"></div>      
+    </div>  
+    <div id="inputtext">
+        <input id="pac-input" class="form-control" type="text" placeholder="Search Box" style="position: absolute;top: 5%;left: 25%;right: 25%;text-overflow: ellipsis;padding-top:10px;">                
+    </div>            
+    <div id="map"></div>
     <div id="centerMarker"></div>
-    <!-- <button onclick="geoFindMe()">Show my location</button> -->                                
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgvR9Sd6xg473wRxo0jrlBkac9wz6oyWs"></script>        
-    <script src="js/google.js"></script>  
+    <!-- <button onclick="geoFindMe()">Show my location</button> --> 
+    <script src="js/manual.js"></script>      
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgvR9Sd6xg473wRxo0jrlBkac9wz6oyWs&libraries=places&callback=initAutocomplete"></script>        
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
