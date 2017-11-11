@@ -6,7 +6,13 @@ function initMap() {
     let mapOptions = {
         zoom: 18,
         center: new google.maps.LatLng(position.coords.latitude,position.coords.longitude),
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        disableDefaultUI: true,
+        mapTypeControl: true,
+        scaleControl: true,
+        zoomControl: true,
+        streetViewControl: false,
+        mapTypeControl: false
       };
       map = new google.maps.Map(document.getElementById('map_canvas'),mapOptions);
   }

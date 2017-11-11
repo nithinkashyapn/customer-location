@@ -45,8 +45,8 @@ html, body {
     z-index: 1;
     margin-left: -10px;
     margin-top: -34px;
-    height: 34px;
-    width: 23px;
+    height: 88px;
+    width: 77px;
     cursor: pointer;
   }
   
@@ -62,9 +62,6 @@ html, body {
 }
 
 #inputtext{
-    position: absolute;
-    top: 5%;
-    left: 25%;
-    right: 25%;
-    text-overflow: ellipsis;    
+      
 }
+
