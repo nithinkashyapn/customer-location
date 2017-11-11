@@ -1,12 +1,12 @@
+var imap;
+
 function initAutocomplete() {
 
     navigator.geolocation.getCurrentPosition(success, error);
-    
     function success(position){
-
         var map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: position.coords.latitude, lng: position.coords.longitude},
-            zoom: 13,
+            zoom: 15,
             mapTypeId: 'roadmap',
             disableDefaultUI: true,
             mapTypeControl: true,
@@ -58,9 +58,16 @@ function initAutocomplete() {
             });
             map.fitBounds(bounds);
         });
+        imap = new google.maps.Map(document.getElementById('map'),map);        
     }
     
     function error(){
         
     }
+}
+
+function submitLoc() {
+    let latS = imap.getCenter().lat(); 
+    let lngS = imap.getCenter().lng();
+    console.log(latS + " " + lngS); 
 }

@@ -10,14 +10,14 @@ html,
 
 #centerMarker {
   position: absolute;
-  background: url(https://s3.ap-south-1.amazonaws.com/rapidoweb/map/Webp.net-resizeimage.png) no-repeat;
+  background: url(https://s3.ap-south-1.amazonaws.com/rapidoweb/map/Webp.net-resizeimagegree.png) no-repeat;
   top: 50%;
   left: 50%;
   z-index: 1;
   margin-left: -10px;
   margin-top: -34px;
-  height: 34px;
-  width: 23px;
+  height: 48px;
+  width: 33px;
   cursor: pointer;
 }
 
