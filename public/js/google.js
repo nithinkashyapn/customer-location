@@ -1,4 +1,6 @@
 var map;
+var urlParams;
+var query;
 
 function initMap() {
   navigator.geolocation.getCurrentPosition(success, error);   
@@ -29,3 +31,20 @@ function submitLoc() {
     let lngS = map.getCenter().lng();
     console.log(latS + " " + lngS); 
 }
+
+function manual() {
+    let place = "/manual.html?" + query;
+    window.location.href = "place";
+}
+
+(window.onpopstate = function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); };
+        query  = window.location.search.substring(1);
+    urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+    console.log(urlParams);   
+})();
