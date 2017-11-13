@@ -66,7 +66,14 @@ function initAutocomplete() {
 }
 
 function submitLoc() {
-    let latS = map.getCenter().lat(); 
-    let lngS = map.getCenter().lng();
-    console.log(latS + " " + lngS); 
+    if(map.getCenter().lat()){
+        let latS = map.getCenter().lat(); 
+        let lngS = map.getCenter().lng();
+        console.log(latS + " " + lngS); 
+    }
+    else{
+        let latS = position.coords.latitude; 
+        let lngS = position.coords.longitude;
+        console.log(latS + " " + lngS); 
+    }    
 }
